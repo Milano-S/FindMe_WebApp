@@ -1,0 +1,42 @@
+﻿@model FindMe_Web.Models.Person
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MissingPersonName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MissingPersonName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastSeen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastSeen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DaysMissing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DaysMissing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MoreInfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MoreInfo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

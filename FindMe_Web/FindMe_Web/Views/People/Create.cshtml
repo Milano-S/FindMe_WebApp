@@ -1,0 +1,48 @@
+﻿@model FindMe_Web.Models.Person
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Person</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MissingPersonName" class="control-label"></label>
+                <input asp-for="MissingPersonName" class="form-control" />
+                <span asp-validation-for="MissingPersonName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastSeen" class="control-label"></label>
+                <input asp-for="LastSeen" class="form-control" />
+                <span asp-validation-for="LastSeen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DaysMissing" class="control-label"></label>
+                <input asp-for="DaysMissing" class="form-control" />
+                <span asp-validation-for="DaysMissing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoreInfo" class="control-label"></label>
+                <input asp-for="MoreInfo" class="form-control" />
+                <span asp-validation-for="MoreInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
